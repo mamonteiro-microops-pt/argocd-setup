@@ -12,7 +12,7 @@ spec:
       - path: "topics/**/*.yaml"
   template:
     metadata:
-      name: '{{`{{path.basename}}`}}'
+      name: '{{`{{topicName}}`}}'
     spec:
       project: default
       source:
