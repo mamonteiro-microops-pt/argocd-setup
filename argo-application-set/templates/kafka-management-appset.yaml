@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: topic-management
+  namespace: argocd
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/RuiEusebio/kafka-management.git
+      revision: HEAD
+      files:
+      - path: "topics/*.yaml"
+  template:
+    metadata:
+      name: '{{topicName}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/RuiEusebio/topic-management-template.git
+        targetRevision: HEAD
+        path: .
+        # chart: '{{topicName}}'
+        helm:
+          parameters:
+            - name: topic.name
+              value: '{{topicName}}'
+            - name: topic.partitions
+              value: '{{nr_partions}}'
+            - name: topic.replicas
+              value: '{{replicas}}'               
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: confluent

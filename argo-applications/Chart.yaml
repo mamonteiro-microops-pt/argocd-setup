@@ -1,0 +1,6 @@
+apiVersion: v2
+name: mep_plugins
+description: A Helm chart for Kubernetes
+type: application
+version: 1.0.5
+appVersion: "1.0"
