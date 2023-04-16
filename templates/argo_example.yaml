@@ -9,7 +9,7 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: {{ .Values.namespace }}
+    namespace: helm-guestbook
     server: {{ .Values.dest_server }}
   project: default
   source:
