@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  argocd_setup:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2023-04-16T16:23:14.489156+01:00"
+    description: A Helm chart for Kubernetes
+    digest: f3e463e867feb5f3b4a5d8b77115617b5cfb63c6fcefceae4b1cbc5e0be38830
+    name: argocd_setup
+    type: application
+    urls:
+    - https://github.com/RuiEusebio/argocd-setup/argocd_setup-1.0.5.tgz
+    version: 1.0.5
+generated: "2023-04-16T16:23:14.488623+01:00"
