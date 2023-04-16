@@ -12,7 +12,7 @@ spec:
       - path: "topics/**/*.yaml"
   template:
     metadata:
-      name: '{{topicName}}'
+      name: '{{`{{topicName}}`}}'
     spec:
       project: default
       source:
@@ -23,11 +23,11 @@ spec:
         helm:
           parameters:
             - name: topic.name
-              value: '{{topicName}}'
+              value: '{{`{{topicName}}`}}'
             - name: topic.partitions
-              value: '{{nr_partions}}'
+              value: '{{`{{nr_partions}}`}}'
             - name: topic.replicas
-              value: '{{replicas}}'               
+              value: '{{`{{replicas}}`}}'               
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
