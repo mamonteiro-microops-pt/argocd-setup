@@ -27,7 +27,7 @@ spec:
               value: '{{`{{nr_partions}}`}}'
             - name: topic.replicas
               value: '{{`{{replicas}}`}}'
-            - name: consumers
+            - name: consumers[0]
               value: |-
                 '{{`{{consumers}}`}}'
       destination:
