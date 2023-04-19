@@ -29,10 +29,10 @@ spec:
               value: '{{`{{replicas}}`}}'
             - name: consumers
               value: |-
-                {{- range $consumer := .Source.consumers }}
-                - name: {{ $consumer.name }}
-                  type: {{ $consumer.type }}
-                {{- end }}
+            {{- range $val := .Source.consumers }}
+            - name: {{ $val.name }}
+              type: {{ $val.type }}
+            {{- end }}
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
