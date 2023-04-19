@@ -28,8 +28,7 @@ spec:
             - name: topic.replicas
               value: '{{`{{replicas}}`}}'
             - name: consumers[0]
-              value: |-
-                '{{`{{consumers}}`}}'
+              value: '{{`{{consumers[0]}}`}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
