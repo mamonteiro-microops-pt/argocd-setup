@@ -27,8 +27,7 @@ spec:
               value: '{{`{{nr_partions}}`}}'
             - name: topic.replicas
               value: '{{`{{replicas}}`}}'
-            {{$consumerList:= "{{`{{consumers}}`}}" }}
-            {{- range $consumer, $i := $consumerList }}  
+            '{{` {{- range $consumer, $i := consumers }} `}}' 
             - name: consumers[{{$i}}]
               value: '{{`{{consumers}}`}}'
             {{- end }}  
