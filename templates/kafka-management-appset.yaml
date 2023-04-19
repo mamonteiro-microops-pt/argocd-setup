@@ -29,7 +29,7 @@ spec:
               value: '{{`{{replicas}}`}}'
             - name: consumers
               value: |-
-                {{- range $consumer := .Source }}
+                {{- range $consumer := .Source.consumers }}
                 - name: {{ $consumer.name }}
                   type: {{ $consumer.type }}
                 {{- end }}
