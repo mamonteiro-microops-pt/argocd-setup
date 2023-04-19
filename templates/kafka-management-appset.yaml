@@ -27,7 +27,7 @@ spec:
               value: '{{`{{nr_partions}}`}}'
             - name: topic.replicas
               value: '{{`{{replicas}}`}}'
-            - name: consumerRoles
+            - name: consumers
               value: '{{`{{consumers}}`}}'     
       destination:
         server: https://kubernetes.default.svc
