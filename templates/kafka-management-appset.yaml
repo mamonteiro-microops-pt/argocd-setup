@@ -26,7 +26,9 @@ spec:
             - name: topic.partitions
               value: '{{`{{nr_partions}}`}}'
             - name: topic.replicas
-              value: '{{`{{replicas}}`}}'               
+              value: '{{`{{replicas}}`}}'
+            - name: consumerRoles
+              value: '{{`{{consumers}}`}}'     
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
