@@ -30,7 +30,7 @@ spec:
             '{{` {{- range $consumer, $i := consumers }} `}}' 
             - name: consumers[$i]
               value: '{{`{{consumers[$i]}}`}}'
-            {{- end }}  
+            '{{`{{- end }}`}}' 
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
