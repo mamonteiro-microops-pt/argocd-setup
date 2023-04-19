@@ -28,8 +28,8 @@ spec:
             - name: topic.replicas
               value: '{{`{{replicas}}`}}'
             '{{` {{- range $consumer, $i := consumers }} `}}' 
-            - name: consumers[{{$i}}]
-              value: '{{`{{consumers}}`}}'
+            - name: consumers[$i]
+              value: '{{`{{consumers[$i]}}`}}'
             {{- end }}  
       destination:
         server: https://kubernetes.default.svc
