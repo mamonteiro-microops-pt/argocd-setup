@@ -17,8 +17,8 @@ spec:
     repoURL: https://github.com/RuiEusebio/eks-confluent-operator.git
     targetRevision: HEAD
   syncPolicy:
-    # automated:
-    #   prune: true
-    #   selfHeal: true
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
