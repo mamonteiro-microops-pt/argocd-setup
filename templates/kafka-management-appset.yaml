@@ -27,8 +27,12 @@ spec:
               value: '{{`{{nr_partions}}`}}'
             - name: topic.replicas
               value: '{{`{{replicas}}`}}'
-            - name: consumers[0]
-              value: '{{`{{consumers}}[0]`}}'
+            - name: consumers
+              value: |-
+                {{- range $consumer := .Source }}
+                - name: {{ $consumer.name }}
+                  type: {{ $consumer.type }}
+                {{- end }}
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
