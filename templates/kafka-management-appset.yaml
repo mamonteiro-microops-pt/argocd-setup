@@ -20,8 +20,9 @@ spec:
         targetRevision: HEAD
         path: .
         helm:
-          valueFiles:
-            - '{{`{{path}}/{{path.filename}}`}}'
+          values:
+            - '{{`{{topic}}`}}'
+            - '{{`{{consumers}}`}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
