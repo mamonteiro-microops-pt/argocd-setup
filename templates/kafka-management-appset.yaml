@@ -20,7 +20,10 @@ spec:
         targetRevision: HEAD
         path: .
         helm:
-          values: '{{`{{topic}}`}}'
+          values: 
+            '{{`{{- range $key, $value := {{topic}} }}
+              {{ $key }}: {{ $value | quote }}
+            {{- end }}`}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
