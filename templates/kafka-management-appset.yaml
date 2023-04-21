@@ -21,7 +21,7 @@ spec:
         path: .
         helm:
           values: |
-            '{{`{{topic}}`}}'
+            data: '{{`{{topic}}`}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
