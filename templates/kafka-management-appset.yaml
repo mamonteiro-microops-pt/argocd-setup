@@ -16,6 +16,7 @@ spec:
     spec:
       project: default
       source:
+        repoUrl: ""
         chart: ./charts/topic-management
         helm:
           values: |
