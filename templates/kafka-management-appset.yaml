@@ -3,6 +3,7 @@ kind: ApplicationSet
 metadata:
   name: kafka-topics
   namespace: argocd
+  argocd.argoproj.io/sync-wave: "5"
 spec:
   generators:
   - git:
@@ -25,7 +26,7 @@ spec:
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
-      # syncPolicy:
-      #   automated:
-      #     prune: true
-      #     selfHeal: true     
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true     

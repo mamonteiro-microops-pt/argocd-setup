@@ -3,6 +3,7 @@ kind: Application
 metadata:
   name: helm-guestbook-app
   namespace: argocd
+  argocd.argoproj.io/sync-wave: "3"
   labels:
     teste: "cenas"
   finalizers:
