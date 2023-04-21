@@ -17,7 +17,7 @@ spec:
       project: default
       source:
         repoURL: https://github.com/RuiEusebio/argocd-setup.git
-        targetRevision: HEAD
+        targetRevision: master
         path: .
         chart: charts/topic-management
         helm:
