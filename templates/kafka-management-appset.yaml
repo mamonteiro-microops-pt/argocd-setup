@@ -21,9 +21,7 @@ spec:
         path: .
         helm:
           values: 
-            '{{`{{- range $key, $value := {{topic}} }}
-              {{ $key }}: {{ $value | quote }}
-            {{- end }}`}}'
+            '{{topic}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
