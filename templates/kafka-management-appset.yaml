@@ -16,7 +16,7 @@ spec:
     spec:
       project: default
       source:
-        repoUrl: https://github.com/RuiEusebio/argocd-setup.git
+        repoUrl: https://github.com/RuiEusebio/argocd-setup
         path: charts
         chart: topic-management
         helm:
