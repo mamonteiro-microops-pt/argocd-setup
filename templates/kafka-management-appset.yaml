@@ -21,7 +21,8 @@ spec:
         path: .
         helm:
           parameters:
-            topic: '{{`{{topic | toYaml}}`}}'
+            - name: topic
+              value: '{{`{{topic | toYaml}}`}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
