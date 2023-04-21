@@ -16,9 +16,9 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/RuiEusebio/argocd-setup
-        path: charts
-        chart: topic-management
+        repoURL: https://github.com/RuiEusebio/topic-management-template.git
+        targetRevision: HEAD
+        path: .
         helm:
           values: |
             '{{`{{values}}`}}'
