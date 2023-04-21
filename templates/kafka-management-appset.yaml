@@ -19,6 +19,10 @@ spec:
         repoURL: https://github.com/RuiEusebio/topic-management-template.git
         targetRevision: HEAD
         path: .
+        helm:
+          parameters:
+            - name: topic.name
+              value: '{{`{{topic.name}}`}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
