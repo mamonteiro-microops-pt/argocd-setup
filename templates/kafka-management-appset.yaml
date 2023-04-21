@@ -16,12 +16,11 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/RuiEusebio/argocd-setup.git
+        repoURL: https://github.com/RuiEusebio/kafka-management.git
         targetRevision: HEAD
         path: ./charts/topic-management
         helm:
-          values: |
-            '{{`{{values | toYaml}}`}}'
+          valueFiles: '{{`{{path}}/{{path.filename}}`}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
