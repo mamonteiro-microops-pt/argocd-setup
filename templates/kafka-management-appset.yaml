@@ -17,7 +17,8 @@ spec:
       project: default
       source:
         repoUrl: https://github.com/RuiEusebio/argocd-setup.git
-        path: ./charts/topic-management
+        path: charts
+        chart: topic-management
         helm:
           values: |
             '{{`{{values}}`}}'
