@@ -16,7 +16,6 @@ spec:
     spec:
       project: default
       source:
-        targetRevision: HEAD
         chart: ./charts/topic-management
         helm:
           values: |
