@@ -19,7 +19,6 @@ spec:
         repoURL: https://github.com/RuiEusebio/argocd-setup.git
         targetRevision: HEAD
         path: ./charts/topic-management
-        chart: kafka-topic
         helm:
           values: |
             '{{`{{values}}`}}'
