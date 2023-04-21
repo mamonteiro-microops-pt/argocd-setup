@@ -21,7 +21,7 @@ spec:
         path: ./charts/topic-management
         helm:
           valueFiles: 
-            - '{{`topics/{{path.basename}}/{{path.filename}}`}}'
+            - '{{`../topics/{{path.basename}}/{{path.filename}}`}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
