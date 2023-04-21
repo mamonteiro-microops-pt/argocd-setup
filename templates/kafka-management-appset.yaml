@@ -16,9 +16,8 @@ spec:
     spec:
       project: default
       source:
-        repoURL: .
         targetRevision: HEAD
-        path: ./charts/topic-management
+        chart: ./charts/topic-management
         helm:
           values: |
             '{{`{{values}}`}}'
