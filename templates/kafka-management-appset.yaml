@@ -21,7 +21,7 @@ spec:
         path: ./charts/topic-management
         helm:
           values: |
-            '{{`{{values}}`}}'
+            '{{`{{values | toYaml}}`}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
