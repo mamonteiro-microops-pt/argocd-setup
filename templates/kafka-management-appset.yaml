@@ -20,15 +20,8 @@ spec:
         targetRevision: HEAD
         path: .
         helm:
-          parameters:
-            - name: topic.name
-              value: '{{`{{topicName}}`}}'
-            - name: topic.partitions
-              value: '{{`{{nr_partions}}`}}'
-            - name: topic.replicas
-              value: '{{`{{replicas}}`}}'
-            - name: consumers
-              value: '{{`{{consumers}}`}}'
+          valueFiles:
+            - '{{path}}/{{path.filename}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
