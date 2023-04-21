@@ -20,8 +20,7 @@ spec:
         targetRevision: HEAD
         path: .
         helm:
-          values: |
-            '{{`{{topic | fromYaml }}`}}'
+          values: '{{`{{topic | fromYaml }}`}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
