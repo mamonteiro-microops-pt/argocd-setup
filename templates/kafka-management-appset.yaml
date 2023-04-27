@@ -3,7 +3,8 @@ kind: ApplicationSet
 metadata:
   name: kafka-topics
   namespace: argocd
-  argocd.argoproj.io/sync-wave: "5"
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
 spec:
   generators:
   - git:
