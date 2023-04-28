@@ -1,2 +1,4 @@
+environment: prd
+
 app_example:
   enabled: false

@@ -1,2 +1,4 @@
+environment: int
+
 app_example:
   enabled: false

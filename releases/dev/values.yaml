@@ -1,2 +1,4 @@
+environment: dev
+
 app_example:
   enabled: false

@@ -19,6 +19,9 @@ spec:
     path: .
     repoURL: https://github.com/RuiEusebio/eks-confluent
     targetRevision: HEAD
+    helm:
+      valueFiles:
+        - ./releases/{{.Values.environment}}/values.yaml    
   syncPolicy:
     automated:
       prune: true

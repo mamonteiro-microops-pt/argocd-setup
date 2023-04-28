@@ -1,5 +1,7 @@
 dest_server: https://kubernetes.default.svc
 
+environment: default
+
 app_example:
   enabled: true
 
