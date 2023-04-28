@@ -1,0 +1,8 @@
+app_example:
+  enabled: true
+
+aws_csi_driver:
+  enabled: false
+
+external_dns:
+  enabled: false

@@ -4,7 +4,7 @@ app_example:
   enabled: true
 
 aws_csi_driver:
-  enabled: false
+  enabled: true
 
 confluent_operator:
   enabled: true
@@ -16,4 +16,4 @@ self_service_kafka:
   enabled: true
 
 external_dns:
-  enabled: false
+  enabled: true
