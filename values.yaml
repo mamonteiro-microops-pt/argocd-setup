@@ -1,1 +1,19 @@
 dest_server: https://kubernetes.default.svc
+
+app_example:
+  enabled: true
+
+aws_csi_driver:
+  enabled: false
+
+confluent_operator:
+  enabled: true
+
+confluent_components:
+  enabled: true
+
+self_service_kafka:
+  enabled: true
+
+external_dns:
+  enabled: false

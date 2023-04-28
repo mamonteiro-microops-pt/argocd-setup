@@ -1,5 +1,6 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
+{{ if .Values.app_example.enabled }}
 metadata:
   name: helm-guestbook-app
   namespace: argocd
@@ -24,3 +25,4 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+{{ end }}
