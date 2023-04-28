@@ -21,7 +21,8 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-        - ./releases/{{.Values.environment}}/values.yaml    
+        - ./releases/{{.Values.environment}}/values.yaml 
+      ignoreMissingValueFiles: true   
   syncPolicy:
     automated:
       prune: true

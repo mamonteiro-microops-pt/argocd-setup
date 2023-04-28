@@ -20,6 +20,7 @@ spec:
     repoURL: https://github.com/RuiEusebio/eks-confluent
     targetRevision: HEAD
     helm:
+      ignoreMissingValueFiles: true
       valueFiles:
         - ./releases/{{.Values.environment}}/values.yaml    
   syncPolicy:
