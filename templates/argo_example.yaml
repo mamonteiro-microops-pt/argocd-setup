@@ -19,9 +19,6 @@ spec:
     path: helm-guestbook
     repoURL: https://github.com/argoproj/argocd-example-apps
     targetRevision: HEAD
-    helm:
-      valueFiles:
-        - ./releases/{{.Values.environment}}/values.yaml
   syncPolicy:
     automated:
       prune: true

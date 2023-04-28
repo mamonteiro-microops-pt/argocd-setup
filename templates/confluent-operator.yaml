@@ -22,7 +22,7 @@ spec:
     helm:
       valueFiles:
         - ./releases/{{.Values.environment}}/values.yaml 
-      ignoreMissingValueFiles: true   
+      ignoreMissingValueFiles: true  
   syncPolicy:
     automated:
       prune: true
