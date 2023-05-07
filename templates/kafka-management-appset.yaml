@@ -12,7 +12,7 @@ spec:
       repoURL: https://github.com/RuiEusebio/kafka-management.git
       revision: HEAD
       files:
-      - path: "./topics/**/*.yaml"
+      - path: "./specs/**/*.yaml"
   template:
     metadata:
       name: '{{`topic-{{topic.name}}`}}'
