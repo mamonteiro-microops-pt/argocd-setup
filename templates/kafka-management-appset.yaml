@@ -15,7 +15,7 @@ spec:
       - path: "./specs/**/*.yaml"
   template:
     metadata:
-      name: '{{`topic-{{topic.name}}`}}'
+      name: '{{`{{info.title}}`}}'
     spec:
       project: default
       source:
@@ -24,7 +24,7 @@ spec:
         path: ./charts/topic-management
         helm:
           valueFiles: 
-            - '{{`../../topics/{{path.basename}}/{{path.filename}}`}}'
+            - '{{`../../specs/{{path.basename}}/{{path.filename}}`}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
