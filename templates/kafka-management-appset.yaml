@@ -46,7 +46,7 @@ spec:
       repoURL: https://github.com/RuiEusebio/kafka-management.git
       revision: HEAD
       files:
-      - path: "./service-accounts/**/*.yaml"
+      - path: "./service-accounts/*.yaml"
   template:
     metadata:
       name: kafka-service-accounts
