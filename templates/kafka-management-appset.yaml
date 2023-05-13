@@ -23,6 +23,9 @@ spec:
         targetRevision: HEAD
         path: ./charts/topic-management
         helm:
+          parameters:
+            - name: schemasDirectory
+              value: "specs/{{path.basename}}/schemas"
           valueFiles: 
             - '{{`../../specs/{{path.basename}}/{{path.filename}}`}}'
       destination:
