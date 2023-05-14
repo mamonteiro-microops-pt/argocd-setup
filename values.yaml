@@ -19,3 +19,6 @@ self_service_kafka:
 
 external_dns:
   enabled: true
+
+serviceAccounts:
+  enabled: true  
