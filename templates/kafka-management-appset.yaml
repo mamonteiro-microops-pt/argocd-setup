@@ -27,7 +27,7 @@ spec:
             - name: schemasDirectory
               value: '{{`specs/{{path.basename}}/schemas`}}'
           valueFiles: 
-            - '{{`../../specs/{{path.basename}}/{{path.filename}}`}}'
+            - '{{`specs/{{path.basename}}/{{path.filename}}`}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
