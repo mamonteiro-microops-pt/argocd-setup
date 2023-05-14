@@ -61,7 +61,7 @@ spec:
         path: ./.build/charts/topic-management
         helm:
           valueFiles: 
-            - '../../service-accounts/service-accounts.yaml'
+            - '../../../service-accounts/service-accounts.yaml'
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
