@@ -21,7 +21,7 @@ spec:
       source:
         repoURL: https://github.com/RuiEusebio/kafka-management.git
         targetRevision: HEAD
-        path: ./charts/topic-management
+        path: ./.build/charts/topic-management
         helm:
           parameters:
             - name: schemasDirectory
@@ -58,7 +58,7 @@ spec:
       source:
         repoURL: https://github.com/RuiEusebio/kafka-management.git
         targetRevision: HEAD
-        path: ./charts/topic-management
+        path: ./.build/charts/topic-management
         helm:
           valueFiles: 
             - '../../service-accounts/service-accounts.yaml'
