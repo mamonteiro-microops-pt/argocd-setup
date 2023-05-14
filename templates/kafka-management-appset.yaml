@@ -65,8 +65,8 @@ spec:
       destination:
         server: https://kubernetes.default.svc
         namespace: confluent
-      syncPolicy:
-        automated:
-          prune: true
-          selfHeal: false     
+      # syncPolicy:
+      #   automated:
+      #     prune: true
+      #     selfHeal: false  
 {{ end }}          
