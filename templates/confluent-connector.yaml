@@ -1,0 +1,33 @@
+{{ if .Values.confluent_components.enabled }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: confluent-connector
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+  labels:
+    kn: "knite-1"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: confluent
+    server: {{ .Values.dest_server }}
+  project: default
+  source:
+    path: ./charts/connector
+    repoURL: https://github.com/RuiEusebio/eks-confluent
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - ./releases/{{.Values.environment}}/values.yaml
+      ignoreMissingValueFiles: true  
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true
+{{ end }}      
