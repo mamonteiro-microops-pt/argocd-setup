@@ -15,7 +15,7 @@ spec:
   project: default
   source:
     path: .
-    repoURL: https://github.com/RuiEusebio/eks-externaldns
+    repoURL: https://github.com/mamonteiro-brg/eks-externaldns
     targetRevision: HEAD
   syncPolicy:
     # automated:
