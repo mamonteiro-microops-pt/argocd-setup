@@ -12,7 +12,7 @@ confluent_operator:
   enabled: true
 
 confluent_components:
-  enabled: true
+  enabled: false
 
 self_service_kafka:
   enabled: true
