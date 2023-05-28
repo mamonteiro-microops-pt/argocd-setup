@@ -12,13 +12,13 @@ confluent_operator:
   enabled: true
 
 confluent_components:
-  enabled: true
+  enabled: false
 
 self_service_kafka:
-  enabled: true
+  enabled: false
 
 external_dns:
-  enabled: true
+  enabled: false
 
 serviceAccounts:
-  enabled: true  
+  enabled: true
