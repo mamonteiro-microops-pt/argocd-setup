@@ -2,22 +2,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: helm-guestbook-app
+  name: app-example
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/sync-wave: "100"
   labels:
     teste: "cenas"
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: helm-guestbook
+    namespace: app-example
     server: {{ .Values.dest_server }}
   project: default
   source:
-    path: helm-guestbook
-    repoURL: https://github.com/argoproj/argocd-example-apps
+    path: .
+    repoURL: https://github.com/RuiEusebio/app-example.git
     targetRevision: HEAD
   syncPolicy:
     automated:

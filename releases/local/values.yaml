@@ -1,7 +1,7 @@
 environment: local
 
 app_example:
-  enabled: true
+  enabled: false
 
 aws_csi_driver:
   enabled: false

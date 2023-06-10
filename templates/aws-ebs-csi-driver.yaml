@@ -6,6 +6,8 @@ metadata:
   namespace: argocd
   labels:
     kn: "knite-1"
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"    
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -15,7 +17,7 @@ spec:
   project: default
   source:
     path: .
-    repoURL: ../eks-aws-ebs-csi.git
+    repoURL: https://github.com/RuiEusebio/eks-aws-ebs-csi.git
     targetRevision: HEAD
   syncPolicy:
     automated:

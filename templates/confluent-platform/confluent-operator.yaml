@@ -5,7 +5,7 @@ metadata:
   name: confluent-operator
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "4"
   labels:
     kn: "knite-1"
   finalizers:
@@ -17,7 +17,7 @@ spec:
   project: default
   source:
     path: .
-    repoURL: https://github.com/mamonteiro-brg/eks-confluent-operator.git
+    repoURL: https://github.com/RuiEusebio/eks-confluent-operator.git
     targetRevision: HEAD
     helm:
       valueFiles:
