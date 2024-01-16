@@ -1,0 +1,32 @@
+{{ if .Values.velero.enabled }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: velero
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+  labels:
+    app: "kn-mep-velero"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: velero
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: ./charts/velero
+    repoURL: https://git.int.kn/scm/mep/iac_velero.git
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - ./values.yaml
+        - ./environments/{{.Values.environment}}/values.yaml
+  syncPolicy:
+    # automated:
+    #   prune: true
+    #   selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+{{ end }}

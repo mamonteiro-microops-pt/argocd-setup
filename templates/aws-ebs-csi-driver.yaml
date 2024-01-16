@@ -5,7 +5,7 @@ metadata:
   name: aws-ebs-csi-driver
   namespace: argocd
   labels:
-    kn: "knite-1"
+    kn: "kafka-cluster"
   annotations:
     argocd.argoproj.io/sync-wave: "1"    
   finalizers:
@@ -17,7 +17,7 @@ spec:
   project: default
   source:
     path: .
-    repoURL: https://github.com/RuiEusebio/eks-aws-ebs-csi.git
+    repoURL: https://github.com/mamonteiro-kafkaops/eks-aws-ebs-csi.git
     targetRevision: HEAD
   syncPolicy:
     automated:

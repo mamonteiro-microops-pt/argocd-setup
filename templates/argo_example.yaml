@@ -17,7 +17,7 @@ spec:
   project: default
   source:
     path: .
-    repoURL: https://github.com/RuiEusebio/app-example.git
+    repoURL: https://github.com/mamonteiro-kafkaops/app-example.git
     targetRevision: HEAD
   syncPolicy:
     automated:

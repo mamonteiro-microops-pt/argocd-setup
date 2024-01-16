@@ -1,2 +1,2 @@
 # argocd-setup
----
+test
