@@ -1,0 +1,28 @@
+{{ if .Values.martianbank.enabled }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: martian-bank
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "100"
+  labels:
+    demo: "martianbank"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: martian-bank
+    server: {{ .Values.dest_server }}
+  project: default
+  source:
+    path: ./martianbank
+    repoURL: https://github.com/mamonteiro-microops-pt/martian-bank-demo.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+{{ end }}

@@ -25,3 +25,6 @@ serviceAccounts:
 
 velero:
   enabled: true
+
+martianbank:
+  enabled: true
