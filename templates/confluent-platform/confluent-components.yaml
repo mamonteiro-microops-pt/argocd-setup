@@ -17,7 +17,7 @@
 #   project: default
 #   source:
 #     path: .
-#     repoURL: https://github.com/mamonteiro-kafkaops/eks-confluent
+#     repoURL: https://github.com/mamonteiro-microops-pt/eks-confluent
 #     targetRevision: HEAD
 #     helm:
 #       ignoreMissingValueFiles: true

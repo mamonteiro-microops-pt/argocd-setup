@@ -17,7 +17,7 @@ spec:
   project: default
   source:
     path: .
-    repoURL: https://github.com/mamonteiro-kafkaops/eks-confluent-operator.git
+    repoURL: https://github.com/mamonteiro-microops-pt/eks-confluent-operator.git
     targetRevision: HEAD
     helm:
       valueFiles:
