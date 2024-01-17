@@ -31,3 +31,6 @@ martianbank:
 
 nginx_ingress_controller:
   enabled: true
+
+keycloak:
+  enabled: true
