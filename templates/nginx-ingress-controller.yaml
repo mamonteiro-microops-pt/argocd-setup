@@ -1,0 +1,28 @@
+{{ if .Values.nginx_ingress_controller.enabled }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-ingress-controller
+  namespace: argocd
+  labels:
+    martianbank: "nginx-ingress-controller"
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"    
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: nginx-ingress-controller
+    server: {{ .Values.dest_server }}
+  project: default
+  source:
+    path: ./charts
+    repoURL: https://github.com/mamonteiro-microops-pt/iac_nginx-ingress-controller
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true 
+{{ end }}      
