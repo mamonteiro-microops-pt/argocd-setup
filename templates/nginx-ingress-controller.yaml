@@ -17,7 +17,7 @@ spec:
   project: default
   source:
     path: .
-    repoURL: https://github.com/mamonteiro-microops-pt/iac_nginx-ingress-controller
+    repoURL: https://github.com/mamonteiro-microops-pt/iac_nginx-ingress-controller.git
     targetRevision: HEAD
   syncPolicy:
     automated:
