@@ -28,9 +28,3 @@ velero:
 
 martianbank:
   enabled: true
-
-nginx_ingress_controller:
-  enabled: true
-
-keycloak:
-  enabled: true
