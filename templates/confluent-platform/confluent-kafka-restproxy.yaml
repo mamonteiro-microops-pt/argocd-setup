@@ -17,7 +17,7 @@ spec:
   project: default
   source:
     path: ./charts/kafka-rest-proxy
-    repoURL: https://github.com/mamonteiro-microops-pt/eks-confluent.git
+    repoURL: https://github.com/mamonteiro-microops-pt/eks-confluent
     targetRevision: HEAD
     helm:
       valueFiles:
