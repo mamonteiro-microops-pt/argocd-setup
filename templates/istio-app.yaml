@@ -6,10 +6,10 @@ metadata:
 spec:
   destination:
     namespace: istio
-    server: https://kubernetes.default.svc
-  project: my-project
+    server: {{ .Values.dest_server }}
+  project: default
   source:
-    path: ./1-example
+    path: 1-example
     repoURL: https://github.com/mamonteiro-microops-pt/config-istio.git
     targetRevision: HEAD
   syncPolicy:

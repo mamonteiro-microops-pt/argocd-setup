@@ -16,8 +16,8 @@ spec:
     server: {{ .Values.dest_server }}
   project: default
   source:
-    path: ./martianbank
-    repoURL: https://github.com/mamonteiro-microops-pt/martianbank.git
+    path: martianbank
+    repoURL: https://github.com/mamonteiro-microops-pt/martian-bank-demo.git
     targetRevision: HEAD
   syncPolicy:
     automated:
