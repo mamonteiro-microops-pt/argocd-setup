@@ -29,3 +29,6 @@ velero:
 martianbank:
   enabled: true
 
+istio_app:
+  enabled: true
+
