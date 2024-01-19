@@ -10,7 +10,7 @@ spec:
   project: my-project
   source:
     path: ./1-example
-    repoURL: https://github.com/mamonteiro-microops-pt/iac_istio.git
+    repoURL: https://github.com/mamonteiro-microops-pt/config-istio.git
     targetRevision: HEAD
   syncPolicy:
     automated:
