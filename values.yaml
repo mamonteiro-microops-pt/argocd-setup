@@ -25,3 +25,7 @@ serviceAccounts:
 
 velero:
   enabled: true
+
+martiankank:
+  enabled: true
+

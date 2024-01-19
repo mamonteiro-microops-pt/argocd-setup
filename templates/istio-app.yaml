@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: istio
+  namespace: argocd
+spec:
+  destination:
+    namespace: istio
+    server: https://kubernetes.default.svc
+  project: my-project
+    source:
+      path: 1-example
+      repoURL: https://github.com/mamonteiro-microops-pt/iac_istio.git
+      targetRevision: HEAD
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true
+      syncOptions:
+        - CreateNamespace=true      
